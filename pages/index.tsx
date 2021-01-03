@@ -21,8 +21,8 @@ export default function Index(): ReactElement {
             <title>streamdota.com - Heroes</title>
         </Head>
         {heroes.map((hero) => <video key={hero} width={'100%'} loop autoPlay muted>
-            <source src={baseUrl + hero + '/150.mov'} type="video/quicktime" />
-            <source src={baseUrl + hero + '/150.webm'} type="video/webm" />
+            <source src={baseUrl + hero + '/300.mov'} type="video/quicktime" />
+            <source src={baseUrl + hero + '/300.webm'} type="video/webm" />
         </video>)}
 
         <style jsx global>{`
