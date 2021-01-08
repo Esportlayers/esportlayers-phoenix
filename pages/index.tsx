@@ -28,7 +28,7 @@ export default function Index(): ReactElement {
             <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
             <title>streamdota.com - Heroes</title>
         </Head>
-        {heroes.map((hero) => <video key={hero} width={'100%'} loop autoPlay muted>
+        {heroes.map((hero) => <video key={hero} height={'150'} loop autoPlay muted>
             <source src={baseUrl + hero + '/300.mov'} type="video/quicktime" />
             <source src={baseUrl + hero + '/300.webm'} type="video/webm" />
         </video>)}
