@@ -6,6 +6,14 @@ const heroes = [
     'ancient_apparition',
     'antimage',
     'axe',
+    'bane',
+    'batrider',
+    'beastmaster',
+    'bloodseeker',
+    'bountyhunter',
+    'brewmaster',
+    'bristleback',
+    'broodmother',
     'witch_doctor',
 ];
 
