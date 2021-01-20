@@ -14,6 +14,12 @@ const heroes = [
     'brewmaster',
     'bristleback',
     'broodmother',
+    'chaosknight',
+    'chen',
+    'clinkz',
+    'clock',
+    'crystalmaiden',
+    'darkseer',
     'witch_doctor',
 ];
 
