@@ -20,6 +20,12 @@ const heroes = [
     'clock',
     'crystalmaiden',
     'darkseer',
+    'darkwillow',
+    'dazzle',
+    'deathprophet',
+    'disruptor',
+    'doom',
+    'dragonknight',
     'witch_doctor',
 ];
 
@@ -34,7 +40,7 @@ export default function Index(): ReactElement {
             <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
             <title>streamdota.com - Heroes</title>
         </Head>
-        {heroes.map((hero) => <video key={hero} height={'150'} loop autoPlay muted>
+        {heroes.map((hero) => <video key={hero} height={'150'} loop autoPlay muted playsInline>
             <source src={baseUrl + hero + '/300.mov'} type="video/quicktime" />
             <source src={baseUrl + hero + '/300.webm'} type="video/webm" />
         </video>)}
@@ -50,13 +56,8 @@ export default function Index(): ReactElement {
             }
 
             .container { 
-                height: 100%;
-                width: 100%;
-                left:0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                position: absolute;
+                min-height: 100vh;
+                width: 100vw;
                 background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
                 background-size: 1800% 1800%;
                 animation: rainbow 60s ease infinite;
