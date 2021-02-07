@@ -40,6 +40,17 @@ const heroes = [
     'huskar',
     'invoker',
     'jakiro',
+    'kotl',
+    'kunkka',
+    'legion',
+    'lesh',
+    'lich',
+    'lifestealer',
+    'lina',
+    'lion',
+    'lonedruid',
+    'luna',
+    'lycan',
     'witch_doctor',
 ];
 
