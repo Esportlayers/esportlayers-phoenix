@@ -29,7 +29,7 @@ const heroes = [
     'drowranger',
     'earth_shaker',
     'earth_spirit',
-    'earth_titan',
+    'elder_titan',
     'ember_spirit',
     'enchantress',
     'enigma',
