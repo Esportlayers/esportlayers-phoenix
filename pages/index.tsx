@@ -80,8 +80,8 @@ export default function Index(): ReactElement {
         </Head>
         {heroes.map((hero) => <Link href={`/${hero}`} key={hero}>
             <video key={hero} height={'150'} loop autoPlay muted playsInline>
-                <source src={baseUrl + hero + '/300.mov'} type="video/quicktime" />
-                <source src={baseUrl + hero + '/300.webm'} type="video/webm" />
+                <source src={baseUrl + hero + '/150.mov'} type="video/quicktime" />
+                <source src={baseUrl + hero + '/150.webm'} type="video/webm" />
             </video>
         </Link>)}
 
