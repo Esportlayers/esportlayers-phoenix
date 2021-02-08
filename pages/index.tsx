@@ -1,7 +1,8 @@
 import { ReactElement } from "react";
 import Head from 'next/head';
+import Link from 'next/link';
 
-const heroes = [
+export const heroes = [
     'alchemist',
     'ancient_apparition',
     'antimage',
@@ -51,10 +52,22 @@ const heroes = [
     'lonedruid',
     'luna',
     'lycan',
+    'magnus',
+    'mars',
+    'medusa',
+    'meepo',
+    'mirana',
+    'monkeyking',
+    'morphling',
+    'naga',
+    'naturesprophet',
+    'necro',
+    'nightstalker',
+    'nyx',
     'witch_doctor',
 ];
 
-const baseUrl = 'https://api.streamdota.com/static/heroes/vids/';
+export const baseUrl = 'https://api.streamdota.com/static/heroes/vids/';
 
 export default function Index(): ReactElement {
     return <div className={'container'}>
@@ -65,10 +78,12 @@ export default function Index(): ReactElement {
             <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
             <title>streamdota.com - Heroes</title>
         </Head>
-        {heroes.map((hero) => <video key={hero} height={'150'} loop autoPlay muted playsInline>
-            <source src={baseUrl + hero + '/300.mov'} type="video/quicktime" />
-            <source src={baseUrl + hero + '/300.webm'} type="video/webm" />
-        </video>)}
+        {heroes.map((hero) => <Link href={`/${hero}`} key={hero}>
+            <video key={hero} height={'150'} loop autoPlay muted playsInline>
+                <source src={baseUrl + hero + '/300.mov'} type="video/quicktime" />
+                <source src={baseUrl + hero + '/300.webm'} type="video/webm" />
+            </video>
+        </Link>)}
 
         <style jsx global>{`
             body, html {
