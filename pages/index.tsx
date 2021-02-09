@@ -64,6 +64,18 @@ export const heroes = [
     'necro',
     'nightstalker',
     'nyx',
+    'ogre',
+    'omni',
+    'oracle',
+    'outworld',
+    'pangolier',
+    'phantomassasin',
+    'phantomlancer',
+    'phoenix',
+    'puck',
+    'pudge',
+    'pugna',
+    'qop',
     'witch_doctor',
 ];
 
@@ -78,7 +90,7 @@ export default function Index(): ReactElement {
             <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
             <title>streamdota.com - Heroes</title>
         </Head>
-        {heroes.map((hero) => <Link href={`/${hero}`} key={hero}>
+        {heroes.slice(-20).map((hero) => <Link href={`/${hero}`} key={hero}>
             <video key={hero} height={'150'} loop autoPlay muted playsInline>
                 <source src={baseUrl + hero + '/150.mov'} type="video/quicktime" />
                 <source src={baseUrl + hero + '/150.webm'} type="video/webm" />
