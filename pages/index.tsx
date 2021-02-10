@@ -76,6 +76,18 @@ export const heroes = [
     'pudge',
     'pugna',
     'qop',
+    'razor',
+    'riki',
+    'rubick',
+    'sandking',
+    'shadowdemon',
+    'shadowfiend',
+    'shadowshaman',
+    'silencer',
+    'skywarth',
+    'slardar',
+    'slark',
+    'snapfire',
     'witch_doctor',
 ];
 
