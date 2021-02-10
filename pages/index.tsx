@@ -84,7 +84,7 @@ export const heroes = [
     'shadowfiend',
     'shadowshaman',
     'silencer',
-    'skywarth',
+    'skywrath',
     'slardar',
     'slark',
     'snapfire',
