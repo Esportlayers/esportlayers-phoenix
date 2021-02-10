@@ -15,6 +15,7 @@ export const heroes = [
     'brewmaster',
     'bristleback',
     'broodmother',
+    'centaur',
     'chaosknight',
     'chen',
     'clinkz',
