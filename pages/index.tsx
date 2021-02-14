@@ -6,6 +6,7 @@ export const heroes = [
     'alchemist',
     'ancient_apparition',
     'antimage',
+    'arc_warden',
     'axe',
     'bane',
     'batrider',
@@ -41,6 +42,7 @@ export const heroes = [
     'hoodwink',
     'huskar',
     'invoker',
+    'io',
     'jakiro',
     'kotl',
     'kunkka',
@@ -103,7 +105,21 @@ export const heroes = [
     'tiny',
     'treant',
     'trollwarlord',
+    'tusk',
+    'underlord',
+    'undying',
+    'ursa',
+    'venge',
+    'veno',
+    'viper',
+    'visage',
+    'voidspirit',
+    'warlock',
+    'weaver',
+    'windranger',
     'witch_doctor',
+    'wraithking',
+    'zeus'
 ];
 
 export const baseUrl = 'https://api.streamdota.com/static/heroes/vids/';
