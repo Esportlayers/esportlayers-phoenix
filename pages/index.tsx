@@ -127,7 +127,6 @@ export const baseUrl = 'https://api.streamdota.com/static/heroes/vids/';
 
 export default function Index(): ReactElement {
     const [offset, setOffset] = useState(0);
-    console.log(offset);
     return <div>
             <div className={'container'}>
             <Head>
