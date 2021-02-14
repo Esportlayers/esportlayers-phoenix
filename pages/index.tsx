@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement, useState } from "react";
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -117,6 +117,7 @@ export const heroes = [
     'warlock',
     'weaver',
     'windranger',
+    'winterwyvern',
     'witch_doctor',
     'wraithking',
     'zeus'
@@ -125,20 +126,29 @@ export const heroes = [
 export const baseUrl = 'https://api.streamdota.com/static/heroes/vids/';
 
 export default function Index(): ReactElement {
-    return <div className={'container'}>
-        <Head>
-            <meta charSet="UTF-8"/>
-            <meta name="google" content="notranslate"/>
-            <meta httpEquiv="Content-Language" content="de"/>
-            <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
-            <title>streamdota.com - Heroes</title>
-        </Head>
-        {heroes.slice(-20).map((hero) => <Link href={`/${hero}`} key={hero}>
-            <video key={hero} height={'150'} loop autoPlay muted playsInline>
-                <source src={baseUrl + hero + '/150.mov'} type="video/quicktime" />
-                <source src={baseUrl + hero + '/150.webm'} type="video/webm" />
-            </video>
-        </Link>)}
+    const [offset, setOffset] = useState(0);
+    console.log(offset);
+    return <div>
+            <div className={'container'}>
+            <Head>
+                <meta charSet="UTF-8"/>
+                <meta name="google" content="notranslate"/>
+                <meta httpEquiv="Content-Language" content="de"/>
+                <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"/>
+                <title>streamdota.com - Heroes</title>
+            </Head>
+            {heroes.slice(offset, offset + 20).map((hero) => <Link href={`/${hero}`} key={hero}>
+                <video key={hero} height={'150'} loop autoPlay muted playsInline>
+                    <source src={baseUrl + hero + '/150.mov'} type="video/quicktime" />
+                    <source src={baseUrl + hero + '/150.webm'} type="video/webm" />
+                </video>
+            </Link>)}
+
+            <div className={'buttons'}>
+                <button onClick={() => setOffset(o => Math.max(0, o - 20))}>Prev</button>
+                <button onClick={() => setOffset(o => Math.min(100, o + 20))}>Next</button>
+            </div>
+        </div>
 
         <style jsx global>{`
             body, html {
@@ -160,6 +170,10 @@ export default function Index(): ReactElement {
                 grid-template-columns: repeat(auto-fill, 150px);
                 grid-gap: 25px;
                 padding: 25px;
+            }
+
+            .buttons {
+                grid-column: 1 / -1;
             }
             @keyframes rainbow { 
                 0%{background-position:0% 82%}
