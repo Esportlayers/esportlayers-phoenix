@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export const heroes = [
+    'abaddon',
     'abyssal_underlord',
     'alchemist',
     'ancient_apparition',
@@ -44,6 +45,7 @@ export const heroes = [
     'huskar',
     'invoker',
     'jakiro',
+    'juggernaut',
     'keeper_of_the_light',
     'kunkka',
     'legion_commander',
